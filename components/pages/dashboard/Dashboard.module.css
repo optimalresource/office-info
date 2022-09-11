@@ -1,8 +1,0 @@
-.container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  background: var(--dark400);
-  border-radius: 50px;
-  padding: 100px 50px;
-}

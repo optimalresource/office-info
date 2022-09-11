@@ -17,7 +17,10 @@ export function Header() {
         height={30}
         alt="logo"
       />
-      <button className="buttonPrimary">Login</button>
+      <div className={styles.menuIcon}>
+        <Icon icon="healthicons:ui-menu-negative" />
+      </div>
+      <button className={`buttonPrimary ${styles.auth}`}>Login</button>
     </div>
   );
 }

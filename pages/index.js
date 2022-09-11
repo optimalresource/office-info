@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Fragment } from "react";
-import Dashboard from "components/pages/dashboard";
+import OfficeOfGO from "components/pages/dashboard/office-of-go";
 
 export default function Home() {
   return (
@@ -9,11 +9,11 @@ export default function Home() {
         <title>RCCG Office Info</title>
         <meta
           name="description"
-          content="A portal for checking the RCCG hierarchy, vision and mission statement, as well as specific information relating to RCCG The Oasis"
+          content="A portal for checking the RCCG hierarchy, vision and mission statement"
         />
         <link rel="icon" href="/fav.png" />
       </Head>
-      <Dashboard />
+      <OfficeOfGO />
     </Fragment>
   );
 }

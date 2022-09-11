@@ -8,3 +8,25 @@
   z-index: 5000;
   max-width: 1900px;
 }
+
+.menuIcon {
+  display: none;
+}
+
+.auth {
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .menuIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    /* color: rgb(87, 172, 116); */
+    color: rgba(67, 53, 144, 1);
+  }
+  .auth {
+    display: none;
+  }
+}
