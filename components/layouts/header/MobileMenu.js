@@ -17,14 +17,14 @@ const MobileMenu = ({ menuToggled, setMenuToggled }) => {
             className={styles.closePanel}
             onClick={() => setMenuToggled(!menuToggled)}
           >
-            {/* <Icon icon="bx:church" /> */}
             <Image
               src="/assets/images/full_logo.png"
               width={150}
               height={30}
               alt="logo"
             />
-            close
+            <Icon icon="fontisto:close-a" />
+            {/* close */}
           </div>
           <div className={styles.memberLinks}>
             <div className={`${styles.menuList} buttonPrimary`}>Login</div>
