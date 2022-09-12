@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Fragment } from "react";
 import OfficeOfGO from "components/pages/dashboard/office-of-go";
 
-export default function Home() {
+export default function InternationalHeadquarters() {
   return (
     <Fragment>
       <Head>
