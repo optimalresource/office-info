@@ -48,7 +48,15 @@ const Office = ({
         </div>
         <div className={styles.ministersContent}>
           <div className={styles.minister}>
-            <img src="/assets/images/1.jpg" width="200px" alt="minister" />
+            {/* <div style={{ width: "200px" }}> */}
+            <Image
+              src="/assets/images/1.jpg"
+              alt="minister"
+              width={266}
+              height={200}
+              layout="intrinsic"
+            />
+            {/* </div> */}
           </div>
         </div>
 
