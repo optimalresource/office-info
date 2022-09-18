@@ -48,7 +48,7 @@ const Office = ({
         </div>
         <div className={styles.ministersContent}>
           <div className={styles.minister}>
-            <img src="/assets/images/1.jpg" width="200px" />
+            <img src="/assets/images/1.jpg" width="200px" alt="minister" />
           </div>
         </div>
 
