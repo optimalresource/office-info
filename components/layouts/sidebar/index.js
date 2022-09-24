@@ -10,20 +10,32 @@ const Sidebar = () => {
     <div className={styles.container}>
       <div className={styles.linkGroup}>
         <ul className={styles.links}>
-          <li className={path === "/" ? styles.active : ""}>
+          <li
+            className={path === "/" ? styles.active : ""}
+            onClick={() => router.push("/")}
+          >
             <Icon icon="bx:church" className={styles.icon} /> Office of the GO
           </li>
           <li
             className={path === "/national-headquarters" ? styles.active : ""}
+            onClick={() => router.push("/national-headquarters")}
           >
             <Icon icon="mdi:church" className={styles.icon} /> National
             Headquarters
           </li>
-          <li>
+          <li
+            className={
+              path === "/International-headquarters" ? styles.active : ""
+            }
+            onClick={() => router.push("/International-headquarters")}
+          >
             <Icon icon="icon-park-twotone:church-one" className={styles.icon} />{" "}
             International Headquarters
           </li>
-          <li>
+          <li
+            className={path === "/International-office" ? styles.active : ""}
+            onClick={() => router.push("/International-office")}
+          >
             <Icon icon="healthicons:church" className={styles.icon} />{" "}
             International Office
           </li>
