@@ -1,3 +1,4 @@
+import { Icon } from "@iconify/react";
 import Image from "next/image";
 import React from "react";
 import styles from "./Office.module.css";
@@ -41,26 +42,17 @@ const Office = ({
       )}
 
       {/* {persons.length > 0 && ( */}
-      <>
-        <div className={styles.ministersSection}>
-          <div className={styles.ministerTitle}>Provincial Leaders</div>
-          <div className={styles.addNewButton}>Add New Province</div>
-        </div>
-        <div className={styles.ministersContent}>
-          <div className={styles.minister}>
-            {/* <div style={{ width: "200px" }}> */}
-            <Image
-              src="/assets/images/1.jpg"
-              alt="minister"
-              width={266}
-              height={200}
-              layout="intrinsic"
-            />
-            {/* </div> */}
+      <div className={styles.tableSection}>
+        <div className={styles.officeHeader}>
+          <div className={styles.officeTitle}>All Regions</div>
+          <div className={styles.searchArea}>
+            <Icon icon="akar-icons:search" />{" "}
+            <input type="text" placeholder="search" />
           </div>
         </div>
+      </div>
 
-        {/* <section className={styles.middleSection}>
+      {/* <section className={styles.middleSection}>
             {persons.map((person, index) => {
               {
                 return (
@@ -82,7 +74,6 @@ const Office = ({
               }
             })}
           </section> */}
-      </>
       {/* )} */}
     </div>
   );
