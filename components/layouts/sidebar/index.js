@@ -1,16 +1,21 @@
 import { Icon } from "@iconify/react";
 import React from "react";
 import styles from "./Sidebar.module.css";
+import { useRouter } from "next/router";
 
 const Sidebar = () => {
+  const router = useRouter();
+  const path = router.asPath;
   return (
     <div className={styles.container}>
       <div className={styles.linkGroup}>
         <ul className={styles.links}>
-          <li className={styles.active}>
+          <li className={path === "/" ? styles.active : ""}>
             <Icon icon="bx:church" className={styles.icon} /> Office of the GO
           </li>
-          <li>
+          <li
+            className={path === "/national-headquarters" ? styles.active : ""}
+          >
             <Icon icon="mdi:church" className={styles.icon} /> National
             Headquarters
           </li>

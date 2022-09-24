@@ -9,6 +9,8 @@ const Office = ({
   persons = [],
   personsTitle,
   addButtonTitle = "Add region",
+  addMore = true,
+  showOffices = true,
   toggleAddModal = () => {},
 }) => {
   return (
@@ -17,10 +19,12 @@ const Office = ({
         <>
           <div className={styles.topSection}>
             <h2>Offices</h2>{" "}
-            <div className="office_button">
-              <Icon icon="akar-icons:plus" />
-              Add Region
-            </div>
+            {addMore && (
+              <div className="office_button">
+                <Icon icon="akar-icons:plus" />
+                Add Region
+              </div>
+            )}
           </div>
           <section className={styles.middleSection}>
             {offices.map((office, index) => {
@@ -45,43 +49,42 @@ const Office = ({
         </>
       )}
 
-      {/* {persons.length > 0 && ( */}
-      <div className={styles.tableSection}>
-        <div className={styles.officeHeader}>
-          <div className={styles.officeTitle}>All Regions</div>
-          <div className={styles.searchArea}>
-            <Icon icon="akar-icons:search" />{" "}
-            <input type="text" placeholder="search" />
+      {showOffices && (
+        <div className={styles.tableSection}>
+          <div className={styles.officeHeader}>
+            <div className={styles.officeTitle}>All Regions</div>
+            <div className={styles.searchArea}>
+              <Icon icon="akar-icons:search" />{" "}
+              <input type="text" placeholder="search" />
+            </div>
           </div>
-        </div>
 
-        <table>
-          <thead>
-            <tr>
-              <th>S/N</th>
-              <th>Region</th>
-              <th>Pastor in Charge</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            {/* {AllGigs.map((gig, index) => { */}
-            {/* return ( */}
-            <tr>
-              <td>1</td>
-              <td>Region name</td>
-              <td>Pastor name</td>
-              <td>
-                <button className="transparentButton">
-                  <Icon icon="akar-icons:eye-open" /> More Info
-                </button>
-              </td>
-            </tr>
-            {/* ); */}
-            {/* })} */}
-          </tbody>
-        </table>
-      </div>
+          <table>
+            <thead>
+              <tr>
+                <th>S/N</th>
+                <th>Region</th>
+                <th>Pastor in Charge</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Region name</td>
+                <td>Pastor name</td>
+                <td>
+                  <button className="transparentButton">
+                    <Icon icon="akar-icons:eye-open" /> More Info
+                  </button>
+                </td>
+              </tr>
+              {/* ); */}
+              {/* })} */}
+            </tbody>
+          </table>
+        </div>
+      )}
     </div>
   );
 };

@@ -184,4 +184,17 @@
   .topSection h2 {
     order: 2;
   }
+
+  .officeHeader {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .searchArea {
+    width: 100%;
+  }
+
+  .searchArea input {
+    width: 70%;
+  }
 }
