@@ -4,8 +4,10 @@ import ClickAwayListener from "components/utils/ClickAwayListener";
 import { menu } from "data/menu";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const MobileMenu = ({ menuToggled, setMenuToggled }) => {
+  const router = useRouter();
   return (
     <>
       <div className="backdrop"></div>
@@ -33,7 +35,14 @@ const MobileMenu = ({ menuToggled, setMenuToggled }) => {
             <ul className={styles.links}>
               {menu.map((value, index) => {
                 return (
-                  <li className={`${styles.menuList}`} key={index}>
+                  <li
+                    className={`${styles.menuList}`}
+                    key={index}
+                    onClick={() => {
+                      setMenuToggled(!menuToggled);
+                      router.push(value?.url);
+                    }}
+                  >
                     <Icon icon={value?.icon} className={styles.icon} />{" "}
                     {value?.title}
                   </li>

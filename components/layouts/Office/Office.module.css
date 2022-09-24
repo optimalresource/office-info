@@ -48,6 +48,7 @@
   flex-direction: column;
   cursor: pointer;
   background: #fff;
+  max-width: 300px;
 }
 
 .card:hover {

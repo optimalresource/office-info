@@ -27,17 +27,10 @@ const Sidebar = () => {
             className={
               path === "/International-headquarters" ? styles.active : ""
             }
-            onClick={() => router.push("/International-headquarters")}
+            onClick={() => router.push("/international-headquarters")}
           >
             <Icon icon="icon-park-twotone:church-one" className={styles.icon} />{" "}
             International Headquarters
-          </li>
-          <li
-            className={path === "/International-office" ? styles.active : ""}
-            onClick={() => router.push("/International-office")}
-          >
-            <Icon icon="healthicons:church" className={styles.icon} />{" "}
-            International Office
           </li>
         </ul>
       </div>

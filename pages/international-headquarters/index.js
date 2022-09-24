@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Fragment } from "react";
-import OfficeOfGO from "components/pages/dashboard/office-of-go";
+import InternationalHeadComponent from "components/pages/dashboard/international-headquarters";
 
 export default function InternationalHeadquarters() {
   return (
@@ -13,7 +13,7 @@ export default function InternationalHeadquarters() {
         />
         <link rel="icon" href="/fav.png" />
       </Head>
-      <OfficeOfGO />
+      <InternationalHeadComponent />
     </Fragment>
   );
 }
