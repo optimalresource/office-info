@@ -66,6 +66,7 @@ a {
   word-break: keep-all;
   word-wrap: normal;
   white-space: nowrap;
+  gap: 10px;
 }
 
 .whiteButton {
@@ -90,12 +91,12 @@ a {
 
 .transparentButton {
   background: rgba(255, 255, 255, 0.1);
-  box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 1);
-  color: #fff;
+  box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.5);
+  color: #000;
 }
 .transparentButton:hover {
   background: rgba(255, 255, 255, 0.2);
-  box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 1);
+  box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.7);
 }
 
 .buttonPrimary {
@@ -105,7 +106,7 @@ a {
 }
 
 .buttonPrimary:hover {
-  background-color: #377669;
+  background-color: var(--primary-regular-900);
   box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
 }
 button {
@@ -165,11 +166,14 @@ button:hover {
 }
 
 .office_button {
-  padding: 10px 50px;
+  padding: 10px 30px;
   background: #fff;
   border: 0;
   outline: 0;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 @media screen and (max-width: 768px) {

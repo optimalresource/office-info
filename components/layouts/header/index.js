@@ -26,7 +26,7 @@ export function Header() {
           className={styles.menuIcon}
           onClick={() => setMenuToggled((previous) => !previous)}
         >
-          <Icon icon="healthicons:ui-menu-negative" />
+          <Icon icon="ant-design:menu-outlined" />
         </div>
         <button className={`buttonPrimary ${styles.auth}`}>Login</button>
       </div>

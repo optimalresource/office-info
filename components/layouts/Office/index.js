@@ -16,7 +16,11 @@ const Office = ({
       {offices.length > 0 && (
         <>
           <div className={styles.topSection}>
-            <div className="office_button">Offices</div>
+            <h2>Offices</h2>{" "}
+            <div className="office_button">
+              <Icon icon="akar-icons:plus" />
+              Add Region
+            </div>
           </div>
           <section className={styles.middleSection}>
             {offices.map((office, index) => {
@@ -50,31 +54,34 @@ const Office = ({
             <input type="text" placeholder="search" />
           </div>
         </div>
-      </div>
 
-      {/* <section className={styles.middleSection}>
-            {persons.map((person, index) => {
-              {
-                return (
-                  person?.parentId === 1 && (
-                    <div className={styles.card} key={index}>
-                      <div className={styles.cardImage}>
-                        <Image
-                          src="/assets/images/rccglogo.png"
-                          width={150}
-                          height={150}
-                          layout="intrinsic"
-                          alt="card"
-                        />
-                      </div>
-                      <div className={styles.cardInfo}>{person?.name}</div>
-                    </div>
-                  )
-                );
-              }
-            })}
-          </section> */}
-      {/* )} */}
+        <table>
+          <thead>
+            <tr>
+              <th>S/N</th>
+              <th>Region</th>
+              <th>Pastor in Charge</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {/* {AllGigs.map((gig, index) => { */}
+            {/* return ( */}
+            <tr>
+              <td>1</td>
+              <td>Region name</td>
+              <td>Pastor name</td>
+              <td>
+                <button className="transparentButton">
+                  <Icon icon="akar-icons:eye-open" /> More Info
+                </button>
+              </td>
+            </tr>
+            {/* ); */}
+            {/* })} */}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

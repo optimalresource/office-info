@@ -13,16 +13,24 @@
   display: flex;
   width: 100%;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.topSection h2 {
+  font-size: 24px;
+  font-weight: 600;
 }
 
 .tableSection {
   display: flex;
+  flex-direction: column;
   width: 100%;
   align-items: center;
   justify-content: space-between;
   margin-top: 50px;
   background: #fff;
+  padding: 20px;
 }
 
 .middleSection {
@@ -79,7 +87,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
 }
 
 .searchArea {
@@ -99,6 +106,49 @@
   outline: none;
 }
 
+.tableSection table {
+  width: 100%;
+  /* border-collapse: collapse; */
+  border-collapse: separate;
+  border-spacing: 0 1em;
+}
+
+.tableSection td,
+.tableSection th {
+  border: 0;
+  text-align: left;
+  padding: 8px;
+}
+
+.tableSection tbody tr {
+  background-color: #fff;
+  box-shadow: 0px 0.926523px 3.70609px rgba(5, 130, 18, 0.16),
+    inset 0px 0.926523px 0.926523px rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+}
+
+.tableSection thead th {
+  padding-bottom: 20px;
+  color: #565d74;
+}
+
+.tableSection th span {
+  color: #fbb30b;
+}
+
+.tableSection td:first-child {
+  border-left-style: solid;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  /* color: #e4e4e4;
+  font-size: 30px; */
+}
+.tableSection td:last-child {
+  border-right-style: solid;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
 @media (max-width: 500px) {
   .container {
     padding: 80px 30px;
@@ -116,5 +166,13 @@
 @media (max-width: 400px) {
   .container {
     padding: 70px 20px;
+  }
+
+  .topSection {
+    flex-direction: column;
+  }
+
+  .topSection h2 {
+    order: 2;
   }
 }
